@@ -1,0 +1,22 @@
+
+<main>
+  {% extends "inicio.html" %}
+  {% block principal %}
+  <div class="container">
+    <h1 class="text-center">
+      Faça uma reserva agora!
+    </h1>
+    {%if sucesso %}
+      <p class="alert alert-success">Mensagem enviada com sucesso!</p>
+    {% else %}
+      <form action="" method="post" novalidate>
+        {% load bootstrap5 %}
+        {% csrf_token %}
+        {% bootstrap_form formulario %}
+        <hr>
+        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+      </form>
+    {% endif %}
+  </div>
+  {% endblock %}
+</main>

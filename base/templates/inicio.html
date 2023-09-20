@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Aula de Hoje - Última</title>
+    
+    <!--Template based on URL below-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <main role="main">
+    <div class="p-5 bg-primary text-white text-center">
+      <h1>Petshop</h1>
+    </div>
+    {% block principal %}
+      <p>Sobre minha empresa...</p>
+      <a href="{% url 'reserva:criar_reserva' %}">Reserve um banho agora!</a>
+    {% endblock %}
+  </main>
+
+</body>
+</html>
